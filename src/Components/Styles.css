@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+
+    animation-name: imageFadeIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    width: 100%;
+}
+
+@keyframes imageFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    /* gap: 3rem; */
+    align-items: center;
+    list-style: none;
+
+}
+
+
+/* li {
+    padding-left: 300px;
+    margin-right: 80px;
+} */
+
+
+.welcome {
+    /* display: flex; */
+    text-align: center;
+    font-size: 100px;
+    color: rgb(64, 65, 141);
+    justify-content: center;
+    padding-top: 250px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        color: grey;
+    }
+
+    to {
+        opacity: 1;
+        color: rgb(64, 65, 141);
+
+    }
+}
+
+.welcome {
+    animation-name: appear;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@media only screen and (max-width: 500px) {
+
+    ul {
+        display: flex;
+        justify-content: inherit;
+        /* justify-content: center !important; */
+    }
+
+    li:nth-child(n){
+
+        font-size: 20px;
+        padding-left: 25px;
+     
+    }
+
+   .welcome {
+
+    padding: 0 auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 250px;
+    font-size: 30px;
+    color: red;
+   }
+}
+
+
+
+.carDetails {
+    background-color: green;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+.button {
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 15px 10px;
+    border-radius: 10px;
+}
+
+p {
+    background-color: red;
+    padding: 10px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
