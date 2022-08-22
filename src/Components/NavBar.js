@@ -9,9 +9,9 @@ function NavBar() {
     return (
       <div>
 
-        <nav>
+        <nav className='desktop-nav'>
 
-          <ul className='desktop-nav'>
+          <ul>
 
             <li><Link to="/">HOME</Link></li>
             <li><Link to="/Audi">AUDI</Link></li>

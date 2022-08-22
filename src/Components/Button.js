@@ -54,7 +54,7 @@ class Button extends Component {
 
   render() {
     return (
-      <div>
+      <div className='btn'>
 
         {this.state.toggle ? <CarDetails /> : null}
         <button className='button' onClick={this.setToggle}>SHOW DETAILS</button>
