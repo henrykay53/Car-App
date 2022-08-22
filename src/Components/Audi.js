@@ -1,7 +1,8 @@
 import React from 'react'
 import NavBar from './NavBar'
 import AudiCar from "../carImages/Audi.jpg"
-import CarDetails from './CarDetails'
+// import CarDetails from './CarDetails'
+import Button from './Button'
 import './Styles.css'
 
 function Audi() {
@@ -10,7 +11,7 @@ function Audi() {
         <div className='image'>
           <NavBar />
             <img src={AudiCar} alt="black-car" />
-            <CarDetails carName="Audi" brand="Audi" model="R8" engine="V8 Twin Turbo" color="Black" year="2022"/>
+            <Button/>
         </div>
     </div>
   )

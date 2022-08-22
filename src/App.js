@@ -1,13 +1,16 @@
 import React from 'react'
-import {Routes, Route } from "react-router-dom";
+// import {Routes, Route } from "react-router-dom";
 
-// import logo from './logo.svg';
-import './App.css';
-// import NavBar from './Components/NavBar';
-import Home from './Components/Home';
-import Audi from './Components/Audi';
-import Benz from './Components/Benz';
-import Ford from './Components/Ford';
+
+// import './App.css';
+// import Home from './Components/Home';
+// import Audi from './Components/Audi';
+// import Benz from './Components/Benz';
+// import Ford from './Components/Ford';
+
+// import DropDown from './Components/MobileDropdown';
+import Hamburger from './Components/Hamburger';
+
 
 
 
@@ -16,16 +19,19 @@ function App() {
   return (
     <div className="App">
 
-      {/* <NavBar /> */}
-      <Routes>
+    
+    {/* <Routes>
 
-        {/* <Route  path="/" component={NavBar} /> */}
-        <Route  path="/" element={ <Home/> } />
-        <Route  path="/audi" element={<Audi/>} />
-        <Route  path="/benz" element={<Benz/>} />
-        <Route  path="/ford" element={<Ford/>} />
+      <Route  path="/" element={ <Home/> } />
+      <Route  path="/audi" element={<Audi/>} />
+      <Route  path="/benz" element={<Benz/>} />
+      <Route  path="/ford" element={<Ford/>} />
 
-      </Routes>
+    </Routes> */}
+
+      <Hamburger />
+
+      {/* <DropDown /> */}
   
     </div>
  

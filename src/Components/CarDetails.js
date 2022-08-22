@@ -1,6 +1,7 @@
 import React from 'react'
 
 function CarDetails(props) {
+
   return (
     <div>
         <div className='carDetails'>
@@ -13,8 +14,6 @@ function CarDetails(props) {
             <p>Year: {props.year}</p>
 
         </div>
-
-        <button className='button'>Show Details</button>
 
     </div>
   

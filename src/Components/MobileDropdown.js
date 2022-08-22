@@ -1,29 +1,21 @@
 import React from 'react'
-import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom'
+import './Styles.css'
+function DropDown() {
 
-
-
-
-function NavBar() {
-
-    return (
-      <div>
-
-        <nav>
-
-          <ul className='desktop-nav'>
+  return (
+    <div className='mobile-dropdown'>
+        <ul>
 
             <li><Link to="/">HOME</Link></li>
             <li><Link to="/Audi">AUDI</Link></li>
             <li><Link to="/Benz">BENZ</Link></li>
             <li><Link to="/Ford">FORD</Link></li>
 
-          </ul>
+        </ul>
+    </div>
+      
+  )
+}
 
-        </nav>
-
-      </div>
-    )
-  }
-
-export default NavBar
+export default DropDown
