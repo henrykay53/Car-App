@@ -25,15 +25,31 @@ class Hamburger extends Component {
 
   render() {
     return (
-      <div>
+      <div className='mobile-nav'>
+
+        <div className='nav-flex'>
+          <nav  className='hamburger' onClick={this.openDropDown}>
+
+            <span id='span1'></span>
+            <span id='span2'></span>
+            <span id='span3'></span>
+
+          </nav>
+
+          <div>
+
+            <h1 className='nav-title'>FavCars</h1>
+
+          </div>
+
+        </div>
+
+        
+
+        
+
         {this.state.isOpen ? <DropDown /> : null}
-        <nav className="mobile-nav" onClick={this.openDropDown}>
 
-          <span id='span1'></span>
-          <span id='span2'></span>
-          <span id='span3'></span>
-
-        </nav>
       </div>
       
       

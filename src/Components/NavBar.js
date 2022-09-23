@@ -11,12 +11,14 @@ function NavBar() {
 
         <nav className='desktop-nav'>
 
+          <h1 className='desktop-nav-title'>FavCars</h1>
+
           <ul>
 
-            <li><Link to="/">HOME</Link></li>
-            <li><Link to="/Audi">AUDI</Link></li>
-            <li><Link to="/Benz">BENZ</Link></li>
-            <li><Link to="/Ford">FORD</Link></li>
+            <li class="desktop-links"><Link to="/">HOME</Link></li>
+            <li class="desktop-links"><Link to="/Audi">AUDI</Link></li>
+            <li class="desktop-links"><Link to="/Benz">BENZ</Link></li>
+            <li class="desktop-links"><Link to="/Ford">FORD</Link></li>
 
           </ul>
 

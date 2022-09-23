@@ -16,7 +16,7 @@ class Button extends Component {
   
     this.state = {
        toggle: false,
-       cars: []
+       posts: []
     }
   }
 
@@ -33,10 +33,10 @@ class Button extends Component {
 
     axios.request(options).then(function (response) {
       console.log(response.data);
-    }).catch(function (error) {
+    }).then((response) => this.setState({posts: response}))
+    .catch(function (error) {
       console.error(error);
     });
-
 
   }
 
@@ -47,6 +47,7 @@ class Button extends Component {
     this.setState({
       // this.state.cars: 
       toggle: !this.state.toggle
+      
     })
   }
 
@@ -56,7 +57,7 @@ class Button extends Component {
     return (
       <div className='btn'>
 
-        {this.state.toggle ? <CarDetails /> : null}
+        {this.state.toggle ? <CarDetails  /> : null}
         <button className='button' onClick={this.setToggle}>SHOW DETAILS</button>
           
       </div>
