@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+/* Smooth fade in animation for images */
 img {
 
     animation-name: imageFadeIn;
@@ -20,6 +21,8 @@ img {
         opacity: 1;
     }
 }
+
+/* End of animation definition */
 
 .desktop-nav {
     display: flex;
@@ -41,32 +44,12 @@ img {
     list-style: none;
 }
 
-/* Tablet media query */
-/* @media only screen and (min-width: 504px) {
-
-    .mobile-nav {
-        display: none;
-    }
-
-    
-} */
-
 .desktop-nav > ul > li > a {
     text-decoration: none;
     padding-left: 20px;
     padding-right: 20px;
 
 }
-
-/* li > a:hover::after {
-
-    display: flex;
-    content: '';
-    padding: 1.5px;
-    background-color: blue;
- 
-} */
-
 
 .desktop-links > a:hover {
 
@@ -77,20 +60,6 @@ img {
     border-radius: 4px;
     transition: 0.5s ease-in-out;
 
-}
-
-@keyframes appear {
-
-    from {
-        opacity: 0;
-        color: grey;
-    }
-
-    to {
-        opacity: 1;
-        color: rgb(64, 65, 141);
-
-    }
 }
 
 .welcome {
@@ -104,7 +73,6 @@ img {
     
 }
 
-
 .welcome {
     animation-name: appear;
     animation-duration: 3s;
@@ -112,35 +80,22 @@ img {
     animation-fill-mode: forwards;
 }
 
-/* Mobile media query */
-@media only screen and (max-width: 500px) {
+/* Animation definition for welcome message */
 
-    /* ul { */
-        /* display: flex; */
-        /* justify-content: inherit; */
-        /* justify-content: center !important; */
-    /* } */
+@keyframes appear {
 
-    /* li:nth-child(n){
+    from {
+        opacity: 0;
+        color: grey;
+    }
 
-        font-size: 20px;
-        padding-left: 25px;
-     
-    } */
-
-   .welcome {
-
-    padding: 0 auto;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-top: 250px;
-    font-size: 30px;
-    color: red;
-   }
+    to {
+        opacity: 1;
+        color: rgb(64, 65, 141);
+    }
 }
 
 .carDetails {
-
     width: 94%;
     margin: 0 auto;
     padding-top: 10px;
@@ -148,12 +103,10 @@ img {
     text-align: center;
     border-radius: 10px;
     background-color: grey;
-    
 }
 
 
 .button {
-    
     margin: 20px auto;
     border: 0;
     padding: 15px;
@@ -166,11 +119,8 @@ img {
 }
 
 .button:hover {
-
     padding: 17px;
-
 }
-
 
 p {
     background-color: red;
@@ -179,15 +129,6 @@ p {
     margin-right: 10px;
     border-radius: 10px;
 }
-
-
-/* .mobile-nav {
-
-    display: flex;
-    align-content: center;
-
-   
-} */
 
 .nav-flex {
     display: flex;
@@ -201,7 +142,6 @@ p {
     display: block;
     height: 3px;
     margin-top: 5px;
-    /* margin-left: 10px; */
     margin-right: 10px;
     width: 35px;
 }
@@ -212,30 +152,65 @@ p {
 }
 
 .mobile-dropdown {
-    border-radius: 8px;
-    background-color: grey;
-    margin: 0 10px 0 10px;
-}
-
-.mobile-dropdown > ul {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: absolute;
     width: 100%;
-    /* padding: 20px; */
-    padding-top: 20px;
-    padding-bottom: 20px;
+    margin-top: 17px;
+    z-index: 10;
+    background-color: grey;
+}
 
+.mobile-dropdown > ul {
+    width: 100%;
+    padding-inline-start: 0 !important;
     list-style: none;
 }
 
 .mobile-dropdown > ul > li {
     text-align: center;
-    padding: 20px;
+    padding: 10px 0 20px 0;
 }
 
 .mobile-dropdown > ul > li > a {
     font-weight: bold;
     text-decoration: none;
 }
+
+/* ALL MEDIA QUERIES ARE WRITTEN AT THE BOTTOM OF MY CSS */
+
+
+/* Media query for mobile
+Desktop nav-bar disappears when the screen width changes */
+@media screen and (max-width: 500px) {
+    .desktop-nav {
+
+        display: none;
+    }
+
+    img {
+         margin-top: 30px;
+         margin-bottom: 40px;
+    }
+
+    .welcome {
+
+        font-size: 40px;
+        margin-top: -80px;
+    }
+
+    .mobile-dropdown {
+        margin-top: 30px;
+    }
+}
+
+
+/* Media query for desktop....Mobile nav-bar disappears when width changes to desktop */
+@media screen and (min-width: 501px) { 
+    .mobile-nav {
+        display: none;
+        background-color: green;
+
+    }
+ }

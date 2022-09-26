@@ -44,10 +44,6 @@ class Hamburger extends Component {
 
         </div>
 
-        
-
-        
-
         {this.state.isOpen ? <DropDown /> : null}
 
       </div>
